@@ -48,7 +48,7 @@ func main() {
       fmt.Println("Not a URL, exitting...")
       return
     }
-    _, err := file.Write(in)
+    _, err := file.WriteString(string(in) + "\n")
     if err != nil {
       panic(err)
     }
